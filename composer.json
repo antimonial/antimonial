@@ -1,0 +1,28 @@
+{
+    "name": "antimonial/antimonial",
+    "type": "project",
+    "description": "The skeleton application for the Antimonial framework.",
+    "keywords": ["antimonial", "framework", "php"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "antimonial/framework": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "prefer-stable": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
