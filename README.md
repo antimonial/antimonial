@@ -32,6 +32,9 @@ DB_PASS=
 
 (Optionally set `APP_DEBUG=true` while developing.)
 
+The front controller auto-loads `.env` via `Antimonial\Core\DotEnv`, so the
+values are available to `env()` and `Config::load` without any extra step.
+
 ## Run
 
 ```bash
