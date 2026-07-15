@@ -4,10 +4,11 @@ namespace App\Controllers;
 
 use Antimonial\Controller\Controller;
 use Antimonial\Database\DB;
+use Antimonial\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $users = DB::table('users')
             ->where('active', 1)
