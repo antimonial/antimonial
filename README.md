@@ -7,7 +7,8 @@ framework. It is the canonical "what an app looks like" reference.
 
 - PHP >= 8.1
 - Composer
-- A MySQL database (the framework's `Connection` is MySQL-only)
+- A database — MySQL, PostgreSQL, or SQLite (only MySQL is wired up in this
+  skeleton by default; see `app/Config/database.php` to add other connections)
 
 ## Install
 

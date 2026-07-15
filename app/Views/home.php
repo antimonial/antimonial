@@ -1,4 +1,4 @@
-<h1>Usuarios activos</h1>
+<h1>Active users</h1>
 
 <ul>
 <?php foreach ($users as $user): ?>
