@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99cb6359a8c71be53849e00d930d83fe",
+    "content-hash": "15291ad99ce56eac625fa3d80efe536a",
     "packages": [
         {
             "name": "antimonial/framework",
-            "version": "v0.10.0",
+            "version": "v0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antimonial/framework.git",
-                "reference": "a9ebc405433a8e6a267c74e8aaa15b4836315f77"
+                "reference": "aaed2925d21e7f9f0710004821652829ec7d5621"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antimonial/framework/zipball/a9ebc405433a8e6a267c74e8aaa15b4836315f77",
-                "reference": "a9ebc405433a8e6a267c74e8aaa15b4836315f77",
+                "url": "https://api.github.com/repos/antimonial/framework/zipball/aaed2925d21e7f9f0710004821652829ec7d5621",
+                "reference": "aaed2925d21e7f9f0710004821652829ec7d5621",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                 "issues": "https://github.com/antimonial/framework/issues",
                 "source": "https://github.com/antimonial/framework"
             },
-            "time": "2026-07-17T19:22:53+00:00"
+            "time": "2026-07-17T19:35:12+00:00"
         }
     ],
     "packages-dev": [],
