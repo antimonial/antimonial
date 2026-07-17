@@ -50,20 +50,25 @@ for named routes and the `route()` helper.
 
 ## Keeping in sync with the framework
 
-The skeleton stays in sync with the framework **automatically**:
+The skeleton follows the framework **automatically** — no manual re-release is
+needed. A scheduled GitHub Actions workflow (`Sync Framework`) runs daily and:
 
-- `composer.json` requires `"antimonial/framework": "~0.9"`, which accepts every
-  `0.9.x` release (including future patches and minors) without a skeleton update.
-- `composer.lock` is **not** committed, so `composer create-project` always
-  resolves the latest framework version that satisfies `~0.9`.
+1. Reads the latest `antimonial/framework` tag from GitHub.
+2. If it is newer than the latest skeleton tag, it updates the dependency,
+   regenerates `composer.lock`, commits, and **tags the skeleton with the same
+   version number** as the framework (e.g. framework `v0.9.6` → skeleton `v0.9.6`).
+3. Pushes the new tag — Packagist picks it up automatically.
 
-This means a new `0.9.x` framework release is picked up the next time someone
-runs `composer create-project` or `composer update` — no skeleton re-release
-needed. A skeleton tag is only published when:
+Notes:
 
-- the **framework jumps to a new major/minor** (e.g. `0.10`, `1.0`) that requires
-  a constraint or file change, or
-- the skeleton's **own files** change (configs, README, structure).
+- `composer.json` requires `"antimonial/framework": "~0.9"` (the `~MAJOR.MINOR`
+  constraint is bumped automatically when the framework moves to a new
+  major/minor, e.g. `0.10` or `1.0`).
+- `composer.lock` **is** committed (reproducible installs) and refreshed by the
+  workflow on every sync, so `composer create-project` gives users the exact
+  framework release of that skeleton tag.
+- You can trigger a sync at any time from the **Actions → Sync Framework →
+  Run workflow** button (`workflow_dispatch`).
 
 ## Views & Template Engine
 

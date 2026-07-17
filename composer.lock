@@ -1,0 +1,76 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c3e633b308cf1de74acfaa5d1a027c2b",
+    "packages": [
+        {
+            "name": "antimonial/framework",
+            "version": "v0.9.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antimonial/framework.git",
+                "reference": "859fde49041c148d1b3a36b3a4056460eeedaa7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antimonial/framework/zipball/859fde49041c148d1b3a36b3a4056460eeedaa7e",
+                "reference": "859fde49041c148d1b3a36b3a4056460eeedaa7e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.18",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^10.5 || ^11.0"
+            },
+            "type": "framework",
+            "autoload": {
+                "files": [
+                    "src/Core/Helpers.php"
+                ],
+                "psr-4": {
+                    "Antimonial\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "antimonial"
+                }
+            ],
+            "description": "A minimal, expressive PHP framework. No magic, no JS, no coupled services.",
+            "homepage": "https://github.com/antimonial/framework",
+            "keywords": [
+                "framework",
+                "minimal",
+                "mvc",
+                "php",
+                "query-builder"
+            ],
+            "support": {
+                "issues": "https://github.com/antimonial/framework/issues",
+                "source": "https://github.com/antimonial/framework"
+            },
+            "time": "2026-07-17T16:16:20+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.1"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}
