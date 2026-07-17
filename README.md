@@ -45,6 +45,9 @@ php -S localhost:8000 -t public public/index.php
 Then open <http://localhost:8000>. The front controller (`public/index.php`)
 ships with the skeleton, so you do **not** need to create it.
 
+Routes can be named for reverse URL generation — see the [framework README](https://github.com/antimonial/framework)
+for named routes and the `route()` helper.
+
 ## Views & Template Engine
 
 The skeleton ships on top of the framework's built-in template engine
