@@ -41,6 +41,10 @@ jobs:
 
       - name: Boot the app (smoke)
         run: |
-          php -r "require 'vendor/autoload.php'; \
+          # Mirror public/index.php: ROOT_PATH is the app's contract with the
+          # framework and must be defined before booting.
+          php -r "define('ROOT_PATH', getcwd()); \
+          require 'vendor/autoload.php'; \
           \\Antimonial\\Core\\Config::load('app'); \
+          \\Antimonial\\Core\\Config::load('database'); \
           echo \"Config loaded OK\n\";"
