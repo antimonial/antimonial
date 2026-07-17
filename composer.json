@@ -1,7 +1,7 @@
 {
     "name": "antimonial/antimonial",
     "type": "project",
-    "description": "The skeleton application for the Antimonial framework.",
+    "description": "A PHP MVC framework where what you read is what runs.",
     "keywords": ["antimonial", "framework", "php"],
     "license": "MIT",
     "require": {
@@ -23,6 +23,5 @@
         "prefer-stable": true,
         "sort-packages": true
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "stable"
 }

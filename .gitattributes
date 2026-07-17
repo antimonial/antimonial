@@ -5,3 +5,4 @@
 *.md diff=markdown
 
 /.github export-ignore
+.gitattributes export-ignore
