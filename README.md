@@ -66,8 +66,7 @@ Key points:
 
 The view path is initialized in `public/index.php` via
 `View::setViewPath(ROOT_PATH . '/app/Views')`. Compiled templates are written
-to `app/storage/views/` (ignored by git). To force native PHP rendering, call
-`Antimonial\View\View::setEngine(null)`.
+ to `app/storage/views/` (ignored by git).
 
 ## Structure
 
