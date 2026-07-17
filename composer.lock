@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0eeb4dc90340b9175823fef7c13b6de",
+    "content-hash": "99cb6359a8c71be53849e00d930d83fe",
     "packages": [
         {
             "name": "antimonial/framework",
-            "version": "v0.9.4",
+            "version": "v0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antimonial/framework.git",
-                "reference": "859fde49041c148d1b3a36b3a4056460eeedaa7e"
+                "reference": "a9ebc405433a8e6a267c74e8aaa15b4836315f77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antimonial/framework/zipball/859fde49041c148d1b3a36b3a4056460eeedaa7e",
-                "reference": "859fde49041c148d1b3a36b3a4056460eeedaa7e",
+                "url": "https://api.github.com/repos/antimonial/framework/zipball/a9ebc405433a8e6a267c74e8aaa15b4836315f77",
+                "reference": "a9ebc405433a8e6a267c74e8aaa15b4836315f77",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                     "name": "antimonial"
                 }
             ],
-            "description": "A minimal, expressive PHP framework. No magic, no JS, no coupled services.",
+            "description": "A PHP MVC framework where what you read is what runs.",
             "homepage": "https://github.com/antimonial/framework",
             "keywords": [
                 "framework",
@@ -59,7 +59,7 @@
                 "issues": "https://github.com/antimonial/framework/issues",
                 "source": "https://github.com/antimonial/framework"
             },
-            "time": "2026-07-17T16:16:20+00:00"
+            "time": "2026-07-17T19:22:53+00:00"
         }
     ],
     "packages-dev": [],
