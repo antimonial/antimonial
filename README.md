@@ -48,6 +48,23 @@ ships with the skeleton, so you do **not** need to create it.
 Routes can be named for reverse URL generation — see the [framework README](https://github.com/antimonial/framework)
 for named routes and the `route()` helper.
 
+## Keeping in sync with the framework
+
+The skeleton stays in sync with the framework **automatically**:
+
+- `composer.json` requires `"antimonial/framework": "~0.9"`, which accepts every
+  `0.9.x` release (including future patches and minors) without a skeleton update.
+- `composer.lock` is **not** committed, so `composer create-project` always
+  resolves the latest framework version that satisfies `~0.9`.
+
+This means a new `0.9.x` framework release is picked up the next time someone
+runs `composer create-project` or `composer update` — no skeleton re-release
+needed. A skeleton tag is only published when:
+
+- the **framework jumps to a new major/minor** (e.g. `0.10`, `1.0`) that requires
+  a constraint or file change, or
+- the skeleton's **own files** change (configs, README, structure).
+
 ## Views & Template Engine
 
 The skeleton ships on top of the framework's built-in template engine
