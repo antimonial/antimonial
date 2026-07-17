@@ -108,6 +108,11 @@ antimonial/
 └── composer.json
 ```
 
+## Documentation
+
+- [Framework Wiki](https://github.com/antimonial/framework/wiki) — routing, the template engine, the query builder, sessions, CSRF, and the full API reference.
+- [Framework README](https://github.com/antimonial/framework) — quick start, what's included, and security notes.
+
 ## License
 
 MIT
