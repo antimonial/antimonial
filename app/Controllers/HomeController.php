@@ -15,6 +15,6 @@ class HomeController extends Controller
             ->orderBy('name')
             ->get();
 
-        return $this->view('home', ['users' => $users], 'layouts/main');
+        return $this->view('home', ['users' => $users]);
     }
 }
