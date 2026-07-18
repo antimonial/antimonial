@@ -1,3 +1,12 @@
 /vendor/
 .env
-/app/storage/
+.phpunit.cache/
+
+# Storage contents are generated at runtime; keep the directories.
+/app/storage/views/*
+/app/storage/logs/*
+/app/storage/uploads/*
+!/app/storage/**/.gitkeep
+
+# Uploaded post images are served via this symlink; recreate after clone.
+/public/uploads

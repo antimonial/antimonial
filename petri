@@ -1,0 +1,100 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Petri — Antimonial skeleton CLI.
+ *
+ * Commands:
+ *   migrate         Run all pending database migrations.
+ *   migrate:rollback Roll back the most recent migration batch.
+ *   view:clear      Delete all compiled view cache files.
+ */
+
+require __DIR__ . '/vendor/autoload.php';
+
+define('ROOT_PATH', __DIR__);
+
+use Antimonial\Core\Config;
+use Antimonial\Core\DotEnv;
+use Antimonial\Database\DB;
+use Antimonial\Database\Migrator;
+
+DotEnv::load(ROOT_PATH . '/.env');
+Config::load('app');
+Config::load('database');
+
+$command = $argv[1] ?? null;
+
+match ($command) {
+    'migrate' => runMigrate(),
+    'migrate:rollback' => runRollback(),
+    'view:clear' => runViewClear(),
+    default => printUsage(),
+};
+
+function runMigrate(): void
+{
+    $db = DB::connection();
+    $migrator = new Migrator($db, ROOT_PATH . '/database/migrations');
+    $ran = $migrator->run();
+
+    if ($ran === []) {
+        echo "Nothing to migrate.\n";
+
+        return;
+    }
+
+    foreach ($ran as $name) {
+        echo "Migrated: {$name}\n";
+    }
+
+    echo 'Done.' . PHP_EOL;
+}
+
+function runRollback(): void
+{
+    $db = DB::connection();
+    $migrator = new Migrator($db, ROOT_PATH . '/database/migrations');
+    $reverted = $migrator->rollback();
+
+    if ($reverted === []) {
+        echo "Nothing to roll back.\n";
+
+        return;
+    }
+
+    foreach ($reverted as $name) {
+        echo "Rolled back: {$name}\n";
+    }
+
+    echo 'Done.' . PHP_EOL;
+}
+
+function runViewClear(): void
+{
+    $cache = ROOT_PATH . '/app/storage/views';
+
+    if (! is_dir($cache)) {
+        echo "No view cache directory ({$cache}).\n";
+
+        return;
+    }
+
+    $files = glob($cache . '/*.php') ?: [];
+    foreach ($files as $file) {
+        unlink($file);
+    }
+
+    echo 'Cleared ' . count($files) . ' compiled view(s).' . PHP_EOL;
+}
+
+function printUsage(): void
+{
+    echo "Petri CLI\n\n";
+    echo "Usage:\n";
+    echo "  php petri migrate\n";
+    echo "  php petri migrate:rollback\n";
+    echo "  php petri view:clear\n";
+}
