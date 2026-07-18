@@ -3,18 +3,17 @@
 namespace App\Controllers;
 
 use Antimonial\Controller\Controller;
-use Antimonial\Database\DB;
 use Antimonial\Http\Request;
+use Antimonial\Security\Auth;
 
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $users = DB::table('users')
-            ->where('active', 1)
-            ->orderBy('name')
-            ->get();
+        if (Auth::check()) {
+            return $this->redirect('/posts');
+        }
 
-        return $this->view('home', ['users' => $users]);
+        return $this->redirect('/login');
     }
 }
