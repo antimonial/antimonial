@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "antimonial/framework",
-            "version": "v0.11.0",
+            "version": "v0.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antimonial/framework.git",
-                "reference": "aaed2925d21e7f9f0710004821652829ec7d5621"
+                "reference": "cd3536b01a665074f1e505315ec4ad7f22209a42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antimonial/framework/zipball/aaed2925d21e7f9f0710004821652829ec7d5621",
-                "reference": "aaed2925d21e7f9f0710004821652829ec7d5621",
+                "url": "https://api.github.com/repos/antimonial/framework/zipball/cd3536b01a665074f1e505315ec4ad7f22209a42",
+                "reference": "cd3536b01a665074f1e505315ec4ad7f22209a42",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                 "issues": "https://github.com/antimonial/framework/issues",
                 "source": "https://github.com/antimonial/framework"
             },
-            "time": "2026-07-17T19:35:12+00:00"
+            "time": "2026-07-17T21:06:02+00:00"
         }
     ],
     "packages-dev": [],

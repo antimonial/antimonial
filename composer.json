@@ -2,7 +2,11 @@
     "name": "antimonial/antimonial",
     "type": "project",
     "description": "A PHP MVC framework where what you read is what runs.",
-    "keywords": ["antimonial", "framework", "php"],
+    "keywords": [
+        "antimonial",
+        "framework",
+        "php"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
